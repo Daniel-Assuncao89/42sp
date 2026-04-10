@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.be>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 17:27:41 by dassunca          #+#    #+#             */
-/*   Updated: 2026/04/07 18:11:32 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/04/09 13:11:04 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ int	main(void)
 	ft_ultimate_div_mod(ptr_a, ptr_b);
 	printf("Resultado: %d\n", a);
 	printf("Resto: %d\n", b);
-}*/
+}
+*/
