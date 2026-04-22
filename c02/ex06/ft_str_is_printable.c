@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/11 16:21:02 by dassunca          #+#    #+#             */
-/*   Updated: 2026/04/11 16:32:20 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/04/12 16:10:49 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 33 && str[i] <= 126)
+		if (str[i] >= 32 && str[i] <= 126)
 		{
 			i++;
-			continue ;
 		}
 		else
 		{
