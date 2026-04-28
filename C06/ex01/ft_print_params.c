@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:51:03 by dassunca          #+#    #+#             */
-/*   Updated: 2026/04/20 15:45:22 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/04/26 11:50:49 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	main(int argc, char **argv)
 	{
 		len = ft_strlen(argv[i]);
 		write(1, argv[i], len);
-		write(1, "\n", 1);
 		i++;
 	}
 	return (argc);
