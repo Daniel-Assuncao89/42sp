@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 12:32:51 by dassunca          #+#    #+#             */
-/*   Updated: 2026/04/28 13:25:04 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/04/28 14:36:30 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	*ft_range(int min, int max)
 {
 	int	*range;
 	int	i;
-	int size;
+	int	size;
 
 	if (min >= max)
 		range = NULL;
