@@ -1,10 +1,13 @@
 NAME = ft_display_file
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_display_file.c ft_putstr.c
+SRCS = main.c
 
-all:
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+all: $(NAME)
+$(NAME):
+	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
 clean:
-	rm -f $(NAME)
+	rm -f $(OBJS)
 fclean: clean
+	rm -f $(NAME)
+re: fclean all
