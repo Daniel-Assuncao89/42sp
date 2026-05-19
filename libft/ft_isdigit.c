@@ -6,11 +6,11 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 15:45:12 by dassunca          #+#    #+#             */
-/*   Updated: 2026/05/18 16:02:14 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/05/19 18:09:59 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

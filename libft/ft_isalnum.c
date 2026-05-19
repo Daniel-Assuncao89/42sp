@@ -6,11 +6,11 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 15:58:45 by dassunca          #+#    #+#             */
-/*   Updated: 2026/05/18 16:30:41 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/05/19 18:07:37 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	unsigned int	result;
 

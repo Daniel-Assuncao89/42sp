@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 17:00:53 by dassunca          #+#    #+#             */
-/*   Updated: 2026/05/18 17:03:37 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/05/19 17:25:13 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@ int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;
-	return (c)
+	return (c);
 }
