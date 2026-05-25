@@ -6,13 +6,15 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 16:16:27 by dassunca          #+#    #+#             */
-/*   Updated: 2026/05/18 16:34:17 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/05/25 14:30:16 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
