@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 13:57:37 by dassunca          #+#    #+#             */
-/*   Updated: 2026/05/25 18:39:51 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/05/26 19:25:22 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!concat)
 		return (NULL);
 	ft_strlcpy(concat, s1, s1_len + 1);
-	ft_strlcat(concat, s2, s2_len + 1);
+	ft_strlcat(concat, s2, s2_len + s1_len + 1);
 	return (concat);
 }
