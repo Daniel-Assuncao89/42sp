@@ -1,18 +1,9 @@
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
-void	test_ft_lowerandupper(int c)
-{
-	if (ft_tolower(c) == (c + 32))
-		printf("Sucees tolower: %c\n", ft_tolower(c));
-	else if(ft_toupper(c) == (c - 32))
-		printf("Sucess toupper: %c\n", ft_toupper(c));
-	else
-		printf("Invalid params");
-}
-
-void    run_test(char *input, int (*f_libc)(const char*), int (*f_libft)(const char*))
+void    run_test_char(char *input, int (*f_libc)(const char*), int (*f_libft)(const char*))
 {
     int expected;
     int result;
@@ -32,44 +23,63 @@ void    run_test(char *input, int (*f_libc)(const char*), int (*f_libft)(const c
     printf("-----------------------------\n");
 }
 
+void    run_test_int(int input, int (*f_libc)(int), int (*f_libft)(int))
+{
+    int expected;
+    int result;
+
+    expected = f_libc(input);
+    result = f_libft(input);
+
+    printf("Input    : %d\n", input);
+    printf("Expected : %d\n", expected);
+    printf("Result   : %d\n", result);
+
+    if (expected == result)
+        printf("Status   : OK\n");
+    else
+        printf("Status   : FAIL\n");
+
+    printf("-----------------------------\n");
+}
+void	ft_basic_functions_tester()
+{
+	run_test_int('a', isalpha, ft_isalpha);
+	run_test_int('1', isdigit, ft_isdigit);
+	run_test_int('A', isalnum, ft_isalnum);
+	run_test_int('1', isalnum, ft_isalnum);
+	run_test_int(32, isascii, ft_isascii);
+	run_test_int(0, isascii, ft_isascii);
+}
 void	atoi_tester()
 {
-    run_test("42", atoi, ft_atoi);
-    run_test("-42", atoi, ft_atoi);
-    run_test("+42", atoi, ft_atoi);
-    run_test("0", atoi, ft_atoi);
-    run_test("   42", atoi, ft_atoi);
-    run_test("\t\n\v\f\r 42", atoi, ft_atoi);
-
-    run_test("--42", atoi, ft_atoi);
-    run_test("-+42", atoi, ft_atoi);
-    run_test("---42", atoi, ft_atoi);
-
-    run_test("42abc", atoi, ft_atoi);
-    run_test("abc42", atoi, ft_atoi);
-    run_test("4a2", atoi, ft_atoi);
-    run_test("a", atoi, ft_atoi);
-
-    run_test("", atoi, ft_atoi);
-
-    run_test("+", atoi, ft_atoi);
-    run_test("-", atoi, ft_atoi);
-
-    run_test("00042", atoi, ft_atoi);
-    run_test("-00042", atoi, ft_atoi);
-    run_test("000", atoi, ft_atoi);
-
-    run_test("2147483647", atoi, ft_atoi);
-    run_test("-2147483648", atoi, ft_atoi);
-
-    run_test("+ 42", atoi, ft_atoi);
-    run_test("- 42", atoi, ft_atoi);
+    run_test_char("42", atoi, ft_atoi);
+    run_test_char("-42", atoi, ft_atoi);
+    run_test_char("+42", atoi, ft_atoi);
+    run_test_char("0", atoi, ft_atoi);
+    run_test_char("   42", atoi, ft_atoi);
+    run_test_char("\t\n\v\f\r 42", atoi, ft_atoi);
+    run_test_char("--42", atoi, ft_atoi);
+    run_test_char("-+42", atoi, ft_atoi);
+    run_test_char("---42", atoi, ft_atoi);
+    run_test_char("42abc", atoi, ft_atoi);
+    run_test_char("abc42", atoi, ft_atoi);
+    run_test_char("4a2", atoi, ft_atoi);
+    run_test_char("a", atoi, ft_atoi);
+    run_test_char("", atoi, ft_atoi);
+    run_test_char("+", atoi, ft_atoi);
+    run_test_char("-", atoi, ft_atoi);
+    run_test_char("00042", atoi, ft_atoi);
+    run_test_char("-00042", atoi, ft_atoi);
+    run_test_char("000", atoi, ft_atoi);
+    run_test_char("2147483647", atoi, ft_atoi);
+    run_test_char("-2147483648", atoi, ft_atoi);
+    run_test_char("+ 42", atoi, ft_atoi);
+    run_test_char("- 42", atoi, ft_atoi);
 }
 
 int	main(void)
 {
-	test_ft_lowerandupper('A');
-	test_ft_lowerandupper('a');
-	test_ft_lowerandupper(1);
-	atoi_tester();
+	ft_basic_functions_tester();
+	//atoi_tester();
 }

@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 20:18:14 by dassunca          #+#    #+#             */
-/*   Updated: 2026/05/26 20:41:13 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/05/29 17:39:56 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,21 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
+	t_list	*node;
 
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
-	new_lst = malloc(ft_lstsize(lst) * sizeof(t_list));
-	if (!new_lst)
-		return (NULL);
+	new_lst = NULL;
 	while (lst != NULL)
 	{
-		new_lst->content = f(lst->content);
-		new_lst->next = lst->next;
-		if (del)
-			del(lst->content);
-		lst = new_lst->next;
+		node = ft_lstnew(f(lst->content));
+		if (!node)
+		{
+			ft_lstclear(&new_lst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_lst, node);
+		lst = lst->next;
 	}
-	ft_lstclear(&lst, del);
 	return (new_lst);
 }

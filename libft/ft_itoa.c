@@ -6,13 +6,12 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 17:15:03 by dassunca          #+#    #+#             */
-/*   Updated: 2026/05/25 17:15:55 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/05/27 19:04:31 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 1. Conta quantos caracteres a string precisará (incluindo o sinal de '-')
 static size_t	get_num_len(int n)
 {
 	size_t	len;
@@ -28,7 +27,6 @@ static size_t	get_num_len(int n)
 	return (len);
 }
 
-// 2. A função principal
 char	*ft_itoa(int n)
 {
 	char	*str;

@@ -6,13 +6,12 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 17:13:56 by dassunca          #+#    #+#             */
-/*   Updated: 2026/05/25 18:39:15 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/05/29 18:00:23 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 1. Conta quantas palavras separadas por 'c' existem na string
 static size_t	count_words(char const *s, char c)
 {
 	size_t	count;
@@ -34,7 +33,6 @@ static size_t	count_words(char const *s, char c)
 	return (count);
 }
 
-// 2. Se malloc de alguma palavra falhar, limpa tudo o que já foi alocado
 static char	**free_matrix(char **matrix, size_t i)
 {
 	while (i > 0)
@@ -46,12 +44,20 @@ static char	**free_matrix(char **matrix, size_t i)
 	return (NULL);
 }
 
-// 3. A função principal que divide a string
+static int	word_len(char const *s, char c)
+{
+	int	len;
+
+	len = 0;
+	while (s[len] && (s[len] != c))
+		len++;
+	return (len);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**matrix;
 	size_t	i;
-	size_t	len;
 
 	if (!s)
 		return (NULL);
@@ -65,13 +71,10 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s)
 		{
-			len = 0;
-			while (s[len] && s[len] != c)
-				len++;
-			matrix[i++] = ft_substr(s, 0, len);
+			matrix[i++] = ft_substr(s, 0, word_len(s, c));
 			if (!matrix[i - 1])
 				return (free_matrix(matrix, i - 1));
-			s += len;
+			s += word_len(s, c);
 		}
 	}
 	matrix[i] = NULL;
