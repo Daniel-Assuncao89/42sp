@@ -6,13 +6,13 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 14:26:09 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/10 19:03:23 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/06/10 19:22:10 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_puthex(unsigned long long ptr_ul, char *hex)
+static int	ft_puthex(unsigned long long ptr_ul, char *hex)
 {
 	int		count;
 
