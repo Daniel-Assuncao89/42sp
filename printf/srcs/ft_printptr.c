@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 14:26:09 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/07 15:43:42 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/06/10 19:03:23 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_printptr(void *ptr)
 	if (!ptr)
 	{
 		write(1, "(nil)", 5);
-		return (3);
+		return (5);
 	}
 	count = 0;
 	hex = "0123456789abcdef";

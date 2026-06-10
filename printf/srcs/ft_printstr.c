@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 19:52:58 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/10 17:17:20 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/06/10 19:00:45 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ int	ft_printstr(const char *src)
 
 	len = 0;
 	if (!src)
-		return (len);
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	len = ft_strlen(src);
 	write(1, src, len);
 	return ((int)len);
