@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 15:52:44 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/07 16:01:30 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/06/10 13:10:22 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_printnbr(int nbr)
 		count++;
 	}
 	if (nbr_l >= 10)
-		count += ft_printnbr((int)nbr_l / 10);
+		count += ft_printnbr((int)(nbr_l / 10));
 	c = (nbr_l % 10) + '0';
 	write(1, &c, 1);
 	return (count + 1);

@@ -6,18 +6,18 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 13:09:38 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/07 17:39:58 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/06/10 18:46:39 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "ft_printf.h"
-
+#include <limits.h>
 
 int	main(void)
 {
 	int	i = 0;
-	char *t = "literal pointer";
+	/*char *t = "literal pointer";
 
 	i = printf("%%teste teste teste\n");
 	printf("OG: %d\n", i);
@@ -64,5 +64,7 @@ int	main(void)
     i = ft_printf("%p\n", t);
 	printf("FT: %d\n", i);
     printf("----------\n");
-	ft_printf("%d, %s, %x, %p\n texto", 32, "lorem", 26, t);
+	ft_printf("%d, %s, %x, %p\n texto", 32, "lorem", 26, t);*/
+	i = printf("%s\n", NULL);
+	i = ft_printf("%s\n", NULL);
 }

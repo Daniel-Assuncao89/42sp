@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 16:08:10 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/07 17:22:21 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/06/08 16:39:38 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	ft_printhex(int c, unsigned int nbr)
 	int			count;
 
 	count = 0;
+	hex = NULL;
 	if (c == 'x')
 		hex = "0123456789abcdef";
 	else if (c == 'X')
