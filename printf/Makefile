@@ -1,14 +1,14 @@
 NAME = libftprintf.a
 CC = cc
 LIBFT_DIR = libft/
-CFLAGS= -Wall -Wextra -Werror -I ./includes -I$(LIBFT_DIR)
-SRCS = srcs/ft_printchar.c srcs/ft_printstr.c \
-srcs/ft_printf.c srcs/ft_printptr.c srcs/ft_printnbr.c \
-srcs/ft_printhex.c srcs/ft_printunsigned.c
+CFLAGS= -Wall -Wextra -Werror -I$(LIBFT_DIR)
+SRCS = ft_printchar.c ft_printstr.c \
+ft_printf.c ft_printptr.c ft_printnbr.c \
+ft_printhex.c ft_printunsigned.c
 
 OBJS = $(SRCS:.c=.o)
 LIBFT = $(LIBFT_DIR)libft.a
-FILE_EXEC = test/example.c
+FILE_EXEC = example.c
 
 all: $(NAME)
 $(LIBFT):

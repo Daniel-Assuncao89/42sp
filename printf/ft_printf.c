@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 14:20:54 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/10 20:15:35 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/06/18 12:00:55 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	ft_matchf(int c, va_list args)
 		printed_chars += ft_printunsigned(va_arg(args, unsigned int));
 	else if (c == '%')
 	{
-		write(1, "%", 1);
+		ft_putchar_fd('%', 1);
 		printed_chars++;
 	}
 	return (printed_chars);
@@ -62,5 +62,4 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(args);
 	return (chars);
-write(1, "(null)", 6);
 }

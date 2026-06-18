@@ -24,7 +24,7 @@ Beyond its immediate functionality, the project serves to deepen the developer's
 
 ## 🛠️ Technical Choices: Algorithms and Data Structures
 
-### 1. Algorithm: Divisões Sucessivas por Recursão (Successive Divisions via Recursion)
+### 1. Algorithm: Successive Divisions via Recursion
 
 For all numerical conversion specifiers (`%d`, `%i`, `%u`, `%x`, `%X`, and `%p`), the chosen core algorithm is **Successive Division**.
 
