@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 13:09:38 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/12 15:02:58 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/06/18 12:35:24 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,5 @@ int	main(void)
     printf("----------\n");
 	ft_printf("%d, %s, %x, %p texto\n", 32, "lorem", 26, t);
 	i = ft_printf("%s\n", NULL);
-	//printf("texto % outro");
-	ft_printf("Hello %a world");
+
 }

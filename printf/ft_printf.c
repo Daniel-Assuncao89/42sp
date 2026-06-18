@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 14:20:54 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/18 12:00:55 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/06/18 12:34:09 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ int	ft_printf(const char *format, ...)
 	unsigned int	index;
 	int				chars;
 
-	if (!format)
-		return (-1);
 	va_start(args, format);
 	index = 0;
 	chars = 0;
