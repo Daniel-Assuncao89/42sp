@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/11 14:40:07 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/11 19:38:33 by dassunca         ###   ########.fr       */
+/*   Created: 2026/06/11 13:38:04 by dassunca          #+#    #+#             */
+/*   Updated: 2026/06/24 13:58:56 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/get_next_line.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 42
+#endif
+# include <stdlib.h>
+# include <unistd.h>
 
-int	line_len(char *line_str, int buff_size)
-{
-	int	len;
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+char	*get_next_line(int fd);
+size_t	ft_strlen(const char *str);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+char	*ft_strjoin(char *left_str, char *buff);
+#endif
 
-	len = 0;
-	while (s[len] != '\n')
-	{
-		if (len > buff_size)
-			break;
-		len++;
-	}
-	return (len);
-}
-
-int	verify_line(char *str, int size)
-{
-	if (!str)
-		return (NULL);
-	return (1);
-}
