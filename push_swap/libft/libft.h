@@ -12,10 +12,15 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <unistd.h>
 # include <stdlib.h>
 # include <stddef.h>
+# include <stdarg.h>
 
+// ************
+// **** OG ****
+// ************
 typedef struct s_list
 {
 	void			*content;
@@ -65,4 +70,32 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// ************
+// ** PRINTF **
+// ************
+
+int		ft_printf(const char *str, ...);
+void	handle_c(va_list arg_list, int *counter);
+void	handle_s(va_list arg_list, int *counter);
+int		to_hex(unsigned int n, char capitalize);
+int		to_hex_pointer(void *nb);
+void	handle_p(va_list arg_list, int *counter);
+void	handle_d(va_list arg_list, int *counter);
+void	handle_u(va_list arg_list, int *counter);
+void	handle_percent(int *counter);
+
+// ***********
+// *** GNL ***
+// ***********
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 14
+# endif
+
+int		search_for_break(char *line, char *buffer);
+void	my_strcpy(char *dest, char *src);
+char	*read_file(int fd, char *line, char *buffer, int total_bytes);
+char	*clean(char *line);
+char	*get_next_line(int fd);
+
 #endif
