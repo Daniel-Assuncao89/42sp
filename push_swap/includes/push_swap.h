@@ -6,7 +6,7 @@
 /*   By: hequeiro <hequeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:01:25 by hequeiro          #+#    #+#             */
-/*   Updated: 2026/07/15 19:09:08 by hequeiro         ###   ########.fr       */
+/*   Updated: 2026/07/19 01:37:47 by hequeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "libft.h"
+# include "parse.h"
 
 typedef struct s_stacks
 {
@@ -23,6 +24,25 @@ typedef struct s_stacks
 	int	amount_a;
 	int	amount_b;
 }	t_stacks;
+
+typedef struct s_bench
+{
+	int			disorder_min;		// DONE
+	int			disorder_max;		// DONE
+	t_strategy	strategy;			// DONE
+	int			total_operations;	// DONE
+	int			count_sa;			// DONE
+	int			count_sb;			// DONE
+	int			count_ss;			// DONE
+	int			count_pa;			// DONE
+	int			count_pb;			// DONE
+	int			count_ra;			// DONE
+	int			count_rb;			// DONE
+	int			count_rr;			// DONE
+	int			count_rra;			// DONE
+	int			count_rrb;			// DONE
+	int			count_rrr;			// DONE
+}	t_bench;
 
 // For production
 // Creates a t_stacks containing stack_a with all receiving numbers
