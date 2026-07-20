@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 13:48:54 by dassunca          #+#    #+#             */
-/*   Updated: 2026/06/24 15:07:54 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/07/20 13:50:17 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ static char	*new_stash_readstr(char *buffer)
 		free(buffer);
 		return (NULL);
 	}
-	i++; // inicia a copia a partir do '\n'
+	i++;
 	j = 0;
 	while (buffer[i])
 		new_str[j++] = buffer[i++];
@@ -126,12 +126,15 @@ char	*get_next_line(int fd)
 }
 /*
 #include <fcntl.h>
+#include <stdio.h>
 int main(int argc, char **argv)
 {
 	int	fd;
 
 	fd = open(argv[1], O_RDONLY);
-	get_next_line(fd);
-	get_next_line(fd);
-	get_next_line(fd);
-}*/
+	printf("%s", get_next_line(fd));
+	printf("%s", get_next_line(fd));
+	printf("%s", get_next_line(fd));
+	return (argc);
+}
+*/
