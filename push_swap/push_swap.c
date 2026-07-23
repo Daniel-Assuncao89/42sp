@@ -99,7 +99,7 @@ static void		strategy_checker(t_input *input, t_bench *bench)
 	else if (input->strategy == STRATEGY_SIMPLE)
 		apply_simple(&stacks, bench);
 	else if (input->strategy == STRATEGY_MEDIUM)
-		ft_printf("Applying Medium Algorithm\n");
+		apply_medium(&stacks, bench);
 	else if (input->strategy == STRATEGY_COMPLEX)
 		ft_printf("Applying Complex Algorithm\n");
 	print_stack(stacks, 'a');

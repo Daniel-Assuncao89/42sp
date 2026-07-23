@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-// t_stacks	init_stacks(int ac, char **av)
 t_stacks	init_stacks(int values[], int length)
 {
 	t_stacks	stacks;
