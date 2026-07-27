@@ -13,7 +13,8 @@
 #include "parse.h"
 /**
  * Faz a segunda leitura dos argumentos, salva os numeros no array de inteiros.
- * Aqui não precisa validar se é flag ou numero, pois isso já foi feito na primeira leitura.
+ * Aqui não precisa validar se é flag ou numero,
+ * pois isso já foi feito na primeira leitura.
  * Valida se o numero já existe no array, se existir retorna 0.
  * preenche o array de inteiros com os numeros validados.
  */
@@ -64,7 +65,8 @@ static int	fill_token(char *token, t_input *input)
 /**
  * Valida se o split não está vazio, se estiver retorna 0.
  * Itera sobre o split, para cada token chama fill_token.
- * fill_token valida se o token é flag ou numero, se for flag ignora, se for numero valida e adiciona no array de inteiros.
+ * fill_token valida se o token é flag ou numero, se for flag ignora,
+ * se for numero valida e adiciona no array de inteiros.
  * ft_split quebra os argumentos em tokens, separados por espaço.
  */
 static int	fill_split(char **split, t_input *input)
@@ -84,7 +86,8 @@ static int	fill_split(char **split, t_input *input)
 /**
  * Itera sobre os argumentos, para cada argumento chama ft_split.
  * Para cada split chama fill_split.
- * fill_split valida se o token é flag ou numero, se for flag ignora, se for numero valida e adiciona no array de inteiros.
+ * fill_split valida se o token é flag ou numero, se for flag ignora,
+ * se for numero valida e adiciona no array de inteiros.
  * ft_split quebra os argumentos em tokens, separados por espaço.
  * Retorna 1 se tudo ok, 0 se algum erro.
  */

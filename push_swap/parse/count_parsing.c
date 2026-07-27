@@ -6,7 +6,7 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/17 12:14:15 by dassunca          #+#    #+#             */
-/*   Updated: 2026/07/17 12:14:19 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/07/23 17:18:29 by hequeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@
  * Retorna 1 se tudo ok, 0 se algum erro.
  */
 
-/**
- * Valida se o token é uma flag, se for chama parse_flag.
- * Se não for flag, valida se é um numero valido com ft_atoi_ps.
- */
+// Validates if token is a flag
+// If it is, calls parse_flag()
+// If it is NOT, validates if it is a valid number with ft_atoi_ps()
 static int	count_token(char *token, t_input *input)
 {
 	int	tmp;
@@ -36,10 +35,9 @@ static int	count_token(char *token, t_input *input)
 	return (1);
 }
 
-/*
- * Valida se o split não está vazio, se estiver retorna 0.
- * Itera sobre o split, para cada token chama count_token.
- */
+// Validates if split is not empty. Returns 0 if it is
+// Iterates over split
+// For each token, calls count_token()
 static int	count_split(char **split, t_input *input)
 {
 	int	i;
@@ -56,10 +54,9 @@ static int	count_split(char **split, t_input *input)
 	return (1);
 }
 
-/**
- * Itera sobre os argumentos, para cada argumento chama ft_split.
- * Para cada split chama count_split.
- */
+// Iterates over the arguments
+// Call ft_split() for each argument
+// For each split, calls count_split()
 int	count_input(int argc, char **argv, t_input *input)
 {
 	char	**split;

@@ -6,7 +6,7 @@
 /*   By: hequeiro <hequeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:09:23 by hequeiro          #+#    #+#             */
-/*   Updated: 2026/07/15 19:08:53 by hequeiro         ###   ########.fr       */
+/*   Updated: 2026/07/23 16:18:54 by hequeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,44 +18,37 @@ t_stacks	init_stacks(int values[], int length)
 	int			i;
 
 	stacks.max_length = length;
-	stacks.stack_a = ft_calloc(length, sizeof(int));
-	stacks.stack_b = ft_calloc(length, sizeof(int));
-	stacks.amount_b = 0;
+	stacks.s_a.stack = ft_calloc(length, sizeof(int));
+	stacks.s_b.stack = ft_calloc(length, sizeof(int));
+	stacks.s_a.name = 'a';
+	stacks.s_b.name = 'b';
 	i = 0;
 	while (i++ < length)
-		stacks.stack_a[i - 1] = values[length - i];
-	stacks.amount_a = length;
+		stacks.s_a.stack[i - 1] = values[length - i];
+	stacks.s_a.amount = length;
+	stacks.s_b.amount = 0;
 	return (stacks);
 }
 
 // To be removed when the project is finished
-void	print_stack(t_stacks stacks, char c)
+void	print_stack(const t_stack *stack)
 {
 	int	i;
 
 	i = 0;
-	ft_printf("Stack %c: ", c == 'a' ? 'A' : 'B');
-	while (c == 'a' && i < stacks.amount_a)
-		ft_printf("%d ", stacks.stack_a[i++]);
-	while (c == 'b' && i < stacks.amount_b)
-		ft_printf("%d ", stacks.stack_b[i++]);
-	if (c == 'b')
-		ft_printf("\n------------------------------");
+	if (stack->name == 'a')
+		ft_printf("Stack A: ");
+	else
+		ft_printf("Stack B: ");
+	while (i < stack->amount)
+		ft_printf("%d ", stack->stack[i++]);
 	ft_printf("\n");
 }
 
-// Checks if given stacks is already ordered
-// Inútil agora depois que implementei cálculo de disorder
-// Remover futuramente
-int	is_ordered(int nbs[], int size)
+void	print_stacks(const t_stacks *stacks)
 {
-	int	i;
-
-	if (size <= 1)
-		return (1);
-	i = 1;
-	while (i++ < size)
-		if (nbs[i - 1] < nbs[i - 2])
-			return (0);
-	return (1);
+	ft_printf("\n***************************\n");
+	print_stack(&stacks->s_a);
+	print_stack(&stacks->s_b);
+	ft_printf("***************************\n");
 }

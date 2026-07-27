@@ -6,52 +6,45 @@
 /*   By: hequeiro <hequeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:07:58 by hequeiro          #+#    #+#             */
-/*   Updated: 2026/07/19 01:30:09 by hequeiro         ###   ########.fr       */
+/*   Updated: 2026/07/23 16:22:12 by hequeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "operations.h"
 
+void	px(t_stacks *stacks, char dest)
+{
+	t_stack	*s_a;
+	t_stack	*s_b;
+
+	s_a = &stacks->s_a;
+	s_b = &stacks->s_b;
+	if (dest == 'b' && s_a->amount > 0)
+	{
+		s_b->stack[s_b->amount] = s_a->stack[s_a->amount - 1];
+		s_b->amount++;
+		s_a->amount--;
+	}
+	else if (dest == 'a' && s_b->amount > 0)
+	{
+		s_a->stack[s_a->amount] = s_b->stack[s_b->amount - 1];
+		s_a->amount++;
+		s_b->amount--;
+	}
+}
+
 void	pa(t_stacks *stacks, t_bench *bench)
 {
-	int	*amount_a;
-	int	*amount_b;
-	int	*stack_a;
-	int	*stack_b;
-
-	stack_a = stacks->stack_a;
-	stack_b = stacks->stack_b;
-	amount_a = &(stacks->amount_a);
-	amount_b = &(stacks->amount_b);
-	if (*amount_b > 0)
-	{
-		stack_a[*amount_a] = stack_b[*amount_b - 1];
-		(*amount_a)++;
-		(*amount_b)--;
-		bench->total_operations++;
-		bench->count_pa++;
-	}
+	px(stacks, 'a');
+	bench->total_operations++;
+	bench->count_pa++;
 	ft_printf("pa\n");
 }
 
 void	pb(t_stacks *stacks, t_bench *bench)
 {
-	int	*amount_a;
-	int	*amount_b;
-	int	*stack_a;
-	int	*stack_b;
-
-	stack_a = stacks->stack_a;
-	stack_b = stacks->stack_b;
-	amount_a = &(stacks->amount_a);
-	amount_b = &(stacks->amount_b);
-	if (*amount_a > 0)
-	{
-		stack_b[*amount_b] = stack_a[*amount_a - 1];
-		(*amount_b)++;
-		(*amount_a)--;
-		bench->total_operations++;
-		bench->count_pb++;
-	}
+	px(stacks, 'b');
+	bench->total_operations++;
+	bench->count_pb++;
 	ft_printf("pb\n");
 }

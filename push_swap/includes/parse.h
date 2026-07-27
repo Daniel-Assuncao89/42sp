@@ -6,7 +6,7 @@
 /*   By: hequeiro <hequeiro@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 18:02:19 by hequeiro          #+#    #+#             */
-/*   Updated: 2026/07/15 19:16:28 by hequeiro         ###   ########.fr       */
+/*   Updated: 2026/07/23 17:20:48 by hequeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,19 @@
 # define PARSE_H
 
 # include "libft.h"
-// # include <stdlib.h>
-// # include <unistd.h>
-// # include <stdio.h> //Adicionado para teste, remover dps
+# include "limits.h" // For INT_MIN and INT_MAX
 
-// # define PS_INT_MAX 2147483647 //Verificar se está dentro da norma isso e se realmente precisa definir esses valores aqui.
-// # define PS_INT_MIN -2147483648
+/*******************************************************
+ * LEMBRAR DE USAR INT_MIN E INT_MAX EM ATOI_PARSING.C *
+ *******************************************************/
+
+/******************************************************
+ * TRADUZIR OU REMOVER COMENTÁRIOS EM COUNT_PARSING.H *
+ ******************************************************/
+
+/*****************************************************
+ * TRADUZIR OU REMOVER COMENTÁRIOS EM FILL_PARSING.H *
+ *****************************************************/
 
 typedef enum e_strategy
 {
@@ -29,14 +36,13 @@ typedef enum e_strategy
 	STRATEGY_ADAPTIVE
 }	t_strategy;
 
-// Struct que vai guardar tudo que foi obtido na entrada do usuario.
 typedef struct s_input
 {
-	int			*values; //Vai ser o array de inteiros validados.
-	int			size; //Qtd de numero
-	t_strategy	strategy; //Qual algoritmo usar
-	int			has_strategy; //Validar se o usuario já passou alguma estrategia. Evita o envio de duas flags com estrategia.
-	int			bench; //Validar se o modo bench foi passado.
+	int			*values;
+	int			size;
+	t_strategy	strategy;
+	int			has_strategy;
+	int			bench;
 }	t_input;
 
 int		parse_input(int argc, char **argv, t_input *input);

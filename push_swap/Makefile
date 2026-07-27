@@ -17,8 +17,13 @@ DEBUGFLAGS	:= -g -O0
 
 SRCS		:= 	push_swap.c \
 				stack_utils.c \
+				bench_utils.c \
+				algorithms/algo_utils.c \
+				algorithms/algo_utils2.c \
 				algorithms/simple_algo.c \
 				algorithms/medium_algo.c \
+				algorithms/complex_algo.c \
+				algorithms/complex_algo_utils.c \
 				operations/push.c \
 				operations/swap.c \
 				operations/rotate.c \
@@ -62,4 +67,3 @@ debug: $(LIBFT)
 	$(CC) $(CFLAGS) $(DEBUGFLAGS) $(LDFLAGS) $(SRCS) $(PARSE_SRCS2) $(LDLIBS) -o $(NAME)
 
 .PHONY: all clean fclean re
-

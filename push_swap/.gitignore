@@ -1,0 +1,11 @@
+push_swap
+ft_printf/
+compile_commands.json
+swapper/
+checker_linux
+*.o
+*.a
+linked_test
+test_parse*
+*.txt
+TODO.md

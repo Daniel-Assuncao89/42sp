@@ -6,17 +6,13 @@
 /*   By: dassunca <dassunca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/17 12:09:33 by dassunca          #+#    #+#             */
-/*   Updated: 2026/07/17 12:11:19 by dassunca         ###   ########.fr       */
+/*   Updated: 2026/07/23 17:02:04 by hequeiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parse.h"
 
-/**
- * Inicializa a struct t_input com valores default.
- * values = NULL, size = 0, strategy = STRATEGY_ADAPTIVE, has_strategy = 0, bench = 0
- * Retorna void.
- */
+// Initializes t_input with default values.
 void	init_input(t_input *input)
 {
 	input->values = NULL;
@@ -27,9 +23,11 @@ void	init_input(t_input *input)
 }
 
 /**
- * Faz a primeira leitura dos argumentos, conta quantos numeros existem para alocar o array de inteiros.
- * Faz a segunda leitura dos argumentos, salva os numeros no array de inteiros.
- * Retorna 1 se tudo ok, 0 se algum erro.
+ * Does the first read of arguments, counts how many numbers exist
+ * to alloc the array of ints.
+ * Then does the second read of arguments, saves the numbers in the
+ * previous created array.
+ * Returns 1 if all is ok, 0 if any error occurred;
  */
 int	parse_input(int argc, char **argv, t_input *input)
 {
@@ -48,9 +46,7 @@ int	parse_input(int argc, char **argv, t_input *input)
 	return (1);
 }
 
-/**
- * Printa todas as informações do input de maneira bem formatada
- */
+// Prints t_input info in a clean, formatted layout
 void	print_input(t_input *input)
 {
 	int	i;
@@ -69,19 +65,17 @@ void	print_input(t_input *input)
 	ft_printf("======================\n");
 }
 
-/**
- * Convert enum t_strategy para str ao mesmo tempo que valida
- * se é uma estratégia válida
- */
+// Converts t_strategy to string at the same time that checks
+// if the given strategy is valid
 char	*strategy_to_str(t_strategy strategy)
 {
 	if (strategy == STRATEGY_SIMPLE)
-		return ("--simple");
+		return ("Simple");
 	if (strategy == STRATEGY_MEDIUM)
-		return ("--medium");
+		return ("Medium");
 	if (strategy == STRATEGY_COMPLEX)
-		return ("--complex");
+		return ("Complex");
 	if (strategy == STRATEGY_ADAPTIVE)
-		return ("--adaptive");
+		return ("Adaptive");
 	return ("unknown");
 }
