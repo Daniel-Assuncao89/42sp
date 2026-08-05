@@ -1,3 +1,15 @@
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_garden_data.py                                 :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/08/04 16:13:53 by dassunca        #+#    #+#               #
+#  Updated: 2026/08/04 19:42:51 by dassunca        ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
 class Plant:
     def __init__(self, name: str, height: float, age: int) -> None:
         self.name = name
@@ -5,12 +17,18 @@ class Plant:
         self.age = age
 
     def show(self) -> None:
-        print("=== Garden Plant Registry ===")
         print(f"{self.name}: {self.height}cm, {self.age} days old")
 
+
 def ft_garden_data():
-    plant = Plant("Flower", 25, 23)
-    plant.show()
+    print("=== Garden Plant Registry ===")
+    flower = Plant("Rose", 25, 23)
+    flower.show()
+    sunflower = Plant("Sunflower", 80, 45)
+    sunflower.show()
+    cactus = Plant("Cactus", 15, 120)
+    cactus.show()
+
 
 if __name__ == "__main__":
     ft_garden_data()
