@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  ft_plant_growth.py                                :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/04 16:14:10 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/04 19:54:59 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/11 13:45:20 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -45,6 +45,8 @@ def main() -> None:
     rose = Plant("Rose", 25.0, 30)
     rose.show()
     rose.total_growth()
+
+
 
 
 if __name__ == "__main__":

@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  ft_garden_intro.py                                :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/04 16:14:00 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/04 19:44:09 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/11 13:45:16 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
