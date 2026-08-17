@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  ft_different_errors.py                            :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/13 16:20:15 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/13 16:39:27 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/17 18:41:01 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -20,7 +20,8 @@ def garden_operations(operation_number: int) -> None:
     elif (operation_number == 3):
         text = "test"
         number = 938
-        result = text + number
+        _ = text + number
+
 
 def test_error_types():
     print("=== Garden Error Types Demo ===\n")
@@ -29,7 +30,7 @@ def test_error_types():
         try:
             print(f"Testing operation {value}")
             garden_operations(value)
-        
+
         except ValueError as e:
             print(f"Caught ValueError: {e}\n")
         except ZeroDivisionError as e:

@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  ft_garden_security.py                             :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/04 19:57:23 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/12 16:35:36 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/17 15:04:03 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -22,9 +22,11 @@ class Plant:
 {self._days} days old\n")
         else:
             print("Invalid values provided. Plant created with default values")
-    
+
     def current_state(self) -> None:
-        print(f"Current state: {self._name}: {self._height}cm, {self._days} days old")
+        print(
+            f"Current state: {self._name}: \
+            {self._height}cm, {self._days} days old")
 
     def get_height(self) -> float:
         return (self._height)
@@ -51,8 +53,10 @@ class Plant:
     def validations(self, height: float = None, days: int = None) -> bool:
         if (self._height < 0 or self._days < 0):
             return False
-        if ((height is not None and height < 0) or 
-            (days is not None and days < 0)):
+        if (
+            (height is not None and height < 0) or
+            (days is not None and days < 0)
+        ):
             return False
         return True
 

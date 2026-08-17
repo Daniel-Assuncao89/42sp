@@ -6,7 +6,7 @@
 #  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/04 16:59:47 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/04 19:55:51 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/17 15:11:10 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -18,7 +18,7 @@ class Plant:
         self.name = name
         self.height = round(height, 1)
         self.days = days
-        self.week_growth = 0
+        self.week_growth = 0.0
         self.growth = growth
 
     def show(self) -> None:

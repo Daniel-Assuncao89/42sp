@@ -3,12 +3,13 @@
 #                                                      :::      ::::::::    #
 #  ft_garden_analytics.py                            :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/13 12:37:07 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/13 14:32:26 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/17 18:39:04 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
+
 class Plant:
     class PlantStats:
         def __init__(self) -> None:
@@ -146,7 +147,7 @@ class Seed(Flower):
     def show(self) -> None:
         super().show()
         if not self._blooming:
-            print(f"Seeds: 0")
+            print("Seeds: 0")
         else:
             print(f"Seeds: {self._seed_count}")
 
@@ -179,9 +180,7 @@ class Tree(Plant):
     ) -> None:
         super().__init__(name, height, age)
         self._trunk_diameter = trunk_diameter
-
         self._stats = Tree.TreeStats()
-
         print("=== Tree")
 
     def show(self) -> None:

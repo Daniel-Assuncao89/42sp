@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  ft_plant_types.py                                 :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/11 13:37:20 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/12 16:45:23 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/17 15:06:27 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 class Plant:
@@ -17,7 +17,7 @@ class Plant:
         if self.validations(height=height, age=age):
             self._height = round(height, 1)
             self._age = age
-    
+
     def show(self) -> None:
         print(f"{self._name}: {self._height}cm, {self._age} days old")
 
@@ -38,8 +38,10 @@ class Plant:
     def validations(self, height: float = None, age: int = None) -> bool:
         if (self._height < 0 or self._age < 0):
             return False
-        if ((height is not None and height < 0) or 
-            (age is not None and age < 0)):
+        if (
+            (height is not None and height < 0) or
+            (age is not None and age < 0)
+        ):
             return False
         return True
 
@@ -49,7 +51,7 @@ class Flower(Plant):
         super().__init__(name, height, age)
         self._color = color
         self._blooming = False
-        print(f"=== Flower")
+        print("=== Flower")
 
     def show(self) -> None:
         super().show()
@@ -58,17 +60,22 @@ class Flower(Plant):
             print(f"{self._name} is blooming beautifully!")
         else:
             print(f"{self._name} has not bloomed yet")
-    
+
     def bloom(self) -> None:
         print(f"[asking the {self._name} to bloom]")
         self._blooming = True
 
 
 class Tree(Plant):
-    def __init__(self, name: str, height: float, age: int, trunk_diameter: float) -> None:
+    def __init__(
+            self, name: str,
+            height: float,
+            age: int,
+            trunk_diameter: float
+            ) -> None:
         super().__init__(name, height, age)
         self._trunk_diameter = trunk_diameter
-        print(f"=== Tree")
+        print("=== Tree")
 
     def show(self) -> None:
         super().show()
@@ -76,21 +83,28 @@ class Tree(Plant):
 
     def produce_shade(self) -> None:
         print(f"[asking the {self._name} to produce shade]")
-        print(f"Tree {self._name} now produces a shade of {self._height}cm long and {self._trunk_diameter}cm wide.")
+        print(f"Tree {self._name} now produces a shade of \
+              {self._height}cm long and {self._trunk_diameter}cm wide.")
 
 
 class Vegetable(Plant):
-    def __init__(self, name: str, height: float, age: int, harvest_season: str, nutritional_value: int = 0) -> None:
+    def __init__(
+            self, name: str,
+            height: float,
+            age: int,
+            harvest_season: str,
+            nutritional_value: int = 0
+            ) -> None:
         super().__init__(name, height, age)
         self._harvest_season = harvest_season
         self._nutritional_value = nutritional_value
-        print(f"=== Vegetable")
+        print("=== Vegetable")
 
     def show(self) -> None:
         super().show()
         print(f"Harvest Season: {self._harvest_season.capitalize()}")
         print(f"Nutritional Value: {self._nutritional_value}")
-    
+
     def grow(self):
         self.set_height(self._height + 2.1)
 
@@ -100,6 +114,7 @@ class Vegetable(Plant):
             self.set_age(self._age + 1)
             self.grow()
             self._nutritional_value += 1
+
 
 def main() -> None:
     print("=== Garden Security System ===")
@@ -116,6 +131,7 @@ def main() -> None:
     tomato.show()
     tomato.age(20)
     tomato.show()
+
 
 if __name__ == "__main__":
     main()

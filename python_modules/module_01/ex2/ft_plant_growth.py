@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  ft_plant_growth.py                                :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/04 16:14:10 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/11 13:45:20 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/17 15:11:21 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -18,7 +18,7 @@ class Plant:
         self.name = name
         self.height = round(height, 1)
         self.days = days
-        self.week_growth = 0
+        self.week_growth = 0.0
         self.growth = growth
 
     def show(self) -> None:
@@ -45,8 +45,6 @@ def main() -> None:
     rose = Plant("Rose", 25.0, 30)
     rose.show()
     rose.total_growth()
-
-
 
 
 if __name__ == "__main__":

@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  ft_custom_errors.py                               :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/13 16:42:07 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/13 17:57:02 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/17 15:08:50 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
