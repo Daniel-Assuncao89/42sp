@@ -6,15 +6,15 @@
 #  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/13 15:43:12 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/17 15:08:37 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/18 14:36:02 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
 def input_temperature(temp_str: str) -> int:
-    temp_str = int(temp_str)
-    if (temp_str > 40):
+    temp_str_int = int(temp_str)
+    if (temp_str_int > 40):
         raise ValueError(f"{temp_str}°C is too hot for plants (max 40°C)")
-    elif (temp_str < 0):
+    elif (temp_str_int < 0):
         raise ValueError(f"{temp_str}°C is too cold for plants (min 0°C)")
     return int(temp_str)
 

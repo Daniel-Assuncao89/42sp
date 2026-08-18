@@ -6,7 +6,7 @@
 #  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/13 12:37:07 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/17 18:39:04 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/18 15:50:14 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -179,6 +179,7 @@ class Tree(Plant):
         trunk_diameter: float
     ) -> None:
         super().__init__(name, height, age)
+        self._stats: Tree.TreeStats = Tree.TreeStats()
         self._trunk_diameter = trunk_diameter
         self._stats = Tree.TreeStats()
         print("=== Tree")
@@ -217,10 +218,6 @@ class Vegetable(Plant):
         super().show()
         print(f"Harvest Season: {self._harvest_season.capitalize()}")
         print(f"Nutritional Value: {self._nutritional_value}")
-
-    def grow(self) -> None:
-        self.set_height(self._height + 2.1)
-        self._stats.increment_grow()
 
     def age(self, days: int = 1) -> None:
         if days < 0:
