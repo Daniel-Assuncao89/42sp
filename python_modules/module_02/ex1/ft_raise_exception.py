@@ -6,7 +6,7 @@
 #  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/13 15:43:12 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/18 14:36:02 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/18 16:11:58 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -30,7 +30,7 @@ def test_temperature() -> None:
 
         except ValueError as e:
             print(f"Caught input_temperature error: {e}\n")
-    print("All tests completes - program  did't crash!")
+    print("All tests completed - program  did't crash!")
 
 
 if __name__ == "__main__":

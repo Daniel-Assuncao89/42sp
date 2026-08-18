@@ -6,7 +6,7 @@
 #  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/13 15:17:50 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/17 15:07:08 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/18 16:11:07 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -15,14 +15,16 @@ def input_temperature(temp_str: str) -> int:
 
 
 def test_temperature() -> None:
-    try:
-        user_input = input()
-        print(f"Input data is now '{user_input}'")
-        temp = input_temperature(user_input)
-        print(f"Temperature is {temp}°C")
-    except ValueError as e:
-        print(f"Caught input_temperature error: {e}")
-    print("All tests completes - program  did't crash!")
+    tests_input = [25, 'abc']
+    print("=== Garden Temperature ===\n")
+    for test_input in tests_input:
+        try:
+            print(f"Input data is '{test_input}'")
+            temp = input_temperature(test_input)
+            print(f"Temperature is now {temp}°C\n")
+        except ValueError as e:
+            print(f"Caught input_temperature error: {e}\n")
+    print("All tests completed - program  didn't crash!")
 
 
 if __name__ == "__main__":

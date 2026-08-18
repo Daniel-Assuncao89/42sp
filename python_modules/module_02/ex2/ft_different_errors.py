@@ -6,7 +6,7 @@
 #  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/13 16:20:15 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/17 18:41:01 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/18 16:13:58 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -16,7 +16,7 @@ def garden_operations(operation_number: int) -> None:
     elif (operation_number == 1):
         1 / 0
     elif (operation_number == 2):
-        open("non_existent_file.txt", "r")
+        open("non/existent/file", "r")
     elif (operation_number == 3):
         text = "test"
         number = 938
@@ -24,21 +24,21 @@ def garden_operations(operation_number: int) -> None:
 
 
 def test_error_types():
-    print("=== Garden Error Types Demo ===\n")
+    print("=== Garden Error Types Demo ===")
     test_values = [0, 1, 2, 3]
     for value in test_values:
         try:
-            print(f"Testing operation {value}")
+            print(f"Testing operation {value}...")
             garden_operations(value)
 
         except ValueError as e:
-            print(f"Caught ValueError: {e}\n")
+            print(f"Caught ValueError: {e}")
         except ZeroDivisionError as e:
-            print(f"Caught ZeroDivisionError: {e}\n")
+            print(f"Caught ZeroDivisionError: {e}")
         except FileNotFoundError as e:
-            print(f"Caught FileNotFoundError: {e}\n")
+            print(f"Caught FileNotFoundError: {e}")
         except TypeError as e:
-            print(f"Caught TypeError: {e}\n")
+            print(f"Caught TypeError: {e}")
     print("Operation completed successfully")
     print("\nAll error types tested sucessfully!")
 
