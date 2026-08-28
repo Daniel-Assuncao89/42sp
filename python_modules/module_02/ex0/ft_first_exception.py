@@ -6,7 +6,7 @@
 #  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/13 15:17:50 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/18 16:11:07 by dassunca        ###   ########.fr        #
+#  Updated: 2026/08/20 12:04:09 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -15,7 +15,7 @@ def input_temperature(temp_str: str) -> int:
 
 
 def test_temperature() -> None:
-    tests_input = [25, 'abc']
+    tests_input = ['25', 'abc']
     print("=== Garden Temperature ===\n")
     for test_input in tests_input:
         try:
