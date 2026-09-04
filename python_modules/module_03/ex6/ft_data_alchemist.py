@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  ft_data_alchemist.py                              :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/28 20:09:19 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/31 13:52:52 by dassunca        ###   ########.fr        #
+#  Updated: 2026/09/03 18:23:22 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -21,7 +21,7 @@ def data_alchemist() -> None:
     only_cap: list = [player
                       for player in list_of_player
                       if player[0].isupper()]
-    list_score: list = random.sample(range(1, 600), k=len(list_of_player))
+
     print("Initial list of player", list_of_player)
     print("New list with all names capitalized: ", list_cap)
     print("New list of capitalized names only: ", only_cap)
@@ -35,7 +35,7 @@ def data_alchemist() -> None:
     print(f"Score avarage is {avg_score:.2f}")
     high_score = {
         key: value
-        for key,value in dict_player.items()
+        for key, value in dict_player.items()
         if value > avg_score
     }
     print(f"High scores: {high_score}")
