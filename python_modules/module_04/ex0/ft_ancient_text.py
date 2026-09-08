@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  ft_ancient_text.py                                :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/09/03 18:50:37 by dassunca        #+#    #+#               #
-#  Updated: 2026/09/05 20:07:34 by dassunca        ###   ########.fr        #
+#  Updated: 2026/09/07 20:54:26 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -20,18 +20,18 @@ def ancient_text() -> None:
         return
     try:
         file_path: str = sys.argv[1]
-        print(f"Acessing file '{file_path}'\n")
+        print(f"Acessing file '{file_path}'")
         file: typing.IO = open(file_path, 'r')
         content: str = file.read()
-        print("---\n\n")
+        print("---\n")
         print(content)
-        print("---")
+        print("\n---")
         file.close()
         print(f"File '{file_path}' closed.")
     except FileNotFoundError as e:
         print(f"Error opening file '{file_path}': {e}")
     except PermissionError as e:
-        print(f"Permission denied for file '{file_path}': {e}")
+        print(f"Error opening file '{file_path}': {e}")
 
 
 if __name__ == "__main__":
