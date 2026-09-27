@@ -6,7 +6,7 @@
 #  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/13 16:42:07 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/17 15:08:50 by dassunca        ###   ########.fr        #
+#  Updated: 2026/09/27 12:31:02 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -31,6 +31,7 @@ class WaterError(GardenError):
 def main():
     print("=== Custom Garden Errors Demo ===\n")
     print("Testing PlantError...")
+ 
     try:
         raise PlantError("The tomato plant is wilting!")
     except PlantError as e:

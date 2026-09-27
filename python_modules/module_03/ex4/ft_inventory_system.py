@@ -6,7 +6,7 @@
 #  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/08/25 14:34:27 by dassunca        #+#    #+#               #
-#  Updated: 2026/08/28 20:08:12 by dassunca        ###   ########.fr        #
+#  Updated: 2026/09/24 19:39:46 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -20,11 +20,9 @@ def parser() -> dict:
                            for args in user_args[1:]
                            if args.find(':') > 0]
     duplicated: set = set()
-    # Valores invalidos
     invalid_values: list = [not_parsed
                             for not_parsed in user_args[1:]
                             if not_parsed not in parsed_values]
-    # Redundantes
     for value in parsed_values:
         value_key = value.partition(':')[0]
         if value_key in duplicated:
