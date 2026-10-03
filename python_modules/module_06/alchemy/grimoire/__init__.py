@@ -1,2 +1,3 @@
-from .light_validator import validate_ingredients
-from .dark_validator import validate_ingredients as dark_validate_ingredients
+from light_spellbook import light_spell_record
+
+__all__ = ["light_spell_record"]

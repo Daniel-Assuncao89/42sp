@@ -1,38 +1,49 @@
 import abc
-import typing
 
 
 class Creature(abc.ABC):
-    def _init__(self, name: str, type: str) -> None:
+    def __init__(self, name: str, type: str) -> None:
         self.name = name
         self.type = type
 
     @abc.abstractmethod
-    def attack(self, attack: str) -> None:
+    def attack(self) -> str:
         pass
 
     def describe(self) -> str:
-        return f"{self.name} is a {self.type}"
+        return f"{self.name} is a {self.type} type creature"
 
 
 class Flameling(Creature):
-    def attack(self, attack) -> str:
+    def __init__(self) -> None:
+        super().__init__("Flameling", "Fire")
+
+    def attack(self) -> str:
         return f"{self.name} uses Ember!"
 
 
 class Pyrodon(Creature):
-    def attack(self, attack) -> str:
+    def __init__(self) -> None:
+        super().__init__("Pyrodon", "Fire/Flying")
+
+    def attack(self) -> str:
         return f"{self.name} uses Flamethrower!"
 
 
 class Aquabub(Creature):
-    def attack(self, attack) -> str:
-        return f"{self.name} uses Ember!"
+    def __init__(self) -> None:
+        super().__init__("Aquabub", "Water")
+
+    def attack(self) -> str:
+        return f"{self.name} uses Water Gun!"
 
 
 class Torragon(Creature):
-    def attack(self, attack) -> str:
-        return f"{self.name} uses Flamethrower!"
+    def __init__(self) -> None:
+        super().__init__("Torragon", "Water")
+
+    def attack(self) -> str:
+        return f"{self.name} uses Hydro Pump!"
 
 
 class CreatureFactory(abc.ABC):
@@ -46,16 +57,16 @@ class CreatureFactory(abc.ABC):
 
 
 class FlameFactory(CreatureFactory):
-    def create_base(self, name: str, type: str) -> Creature:
-        return Creature(self, name, type)
+    def create_base(self) -> Creature:
+        return Flameling()
 
     def create_evolved(self):
-        return super().create_evolved()
+        return Pyrodon()
 
 
 class AquaFactory(CreatureFactory):
-    def create_base(self, name: str, type: str) -> Creature:
-        return Creature(self, name, type)
+    def create_base(self) -> Creature:
+        return Aquabub()
 
     def create_evolved(self):
-        return super().create_evolved()
+        return Torragon()
