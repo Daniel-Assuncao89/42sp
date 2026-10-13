@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  data_processor.py                                 :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/09/13 15:57:48 by dassunca        #+#    #+#               #
-#  Updated: 2026/09/13 18:46:51 by dassunca        ###   ########.fr        #
+#  Updated: 2026/10/13 13:17:41 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -130,10 +130,10 @@ if __name__ == "__main__":
     print(f"Trying to validate input 'Hello': {numeric.validate('Hello')}")
     print("Test invalid ingestion of string 'foo' without prior validation:")
     try:
-        numeric.ingest("foo")  # type: ignore[arg-type]
+        numeric.ingest("foo")
     except ValueError as exc:
         print(f"Got exception: {exc}")
-    data = [1, 2, 3, 4, 5]
+    data: list[int | float] = [1, 2, 3, 4, 5]
     print(f"Processing data: {data}")
     numeric.ingest(data)
     print("Extracting 3 values...")

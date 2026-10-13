@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  data_pipeline.py                                  :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/09/13 19:01:06 by dassunca        #+#    #+#               #
-#  Updated: 2026/09/13 19:01:29 by dassunca        ###   ########.fr        #
+#  Updated: 2026/10/13 12:57:40 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -220,7 +220,8 @@ if __name__ == "__main__":
         "Hello world",
         [3.14, -1, 2.71],
         [
-            {"log_level": "WARNING", "log_message": "Telnet access! Use ssh instead"},
+            {"log_level": "WARNING", "log_message": "Telnet access! Use ssh \
+instead"},
             {"log_level": "INFO", "log_message": "User wil is connected"},
         ],
         42,
@@ -241,7 +242,8 @@ if __name__ == "__main__":
         ["I love AI", "LLMs are wonderful", "Stay healthy"],
         [
             {"log_level": "ERROR", "log_message": "500 server crash"},
-            {"log_level": "NOTICE", "log_message": "Certificate expires in 10 days"},
+            {"log_level": "NOTICE", "log_message": "Certificate expires \
+in 10 days"},
         ],
         [32, 42, 64, 84, 128, 168],
         "World hello",

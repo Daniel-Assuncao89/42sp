@@ -3,10 +3,10 @@
 #                                                      :::      ::::::::    #
 #  data_stream.py                                    :+:      :+:    :+:    #
 #                                                  +:+ +:+         +:+      #
-#  By: dassunca <dassunca@student.42sp.org.br>   +#+  +:+       +#+         #
+#  By: dassunca <dassunca@student.42.fr>         +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/09/13 18:50:03 by dassunca        #+#    #+#               #
-#  Updated: 2026/09/13 18:58:24 by dassunca        ###   ########.fr        #
+#  Updated: 2026/10/13 12:56:45 by dassunca        ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -180,7 +180,8 @@ if __name__ == "__main__":
         "Hello world",
         [3.14, -1, 2.71],
         [
-            {"log_level": "WARNING", "log_message": "Telnet access! Use ssh instead"},
+            {"log_level": "WARNING", "log_message": "Telnet access! Use ssh \
+instead"},
             {"log_level": "INFO", "log_message": "User wil is connected"},
         ],
         42,
