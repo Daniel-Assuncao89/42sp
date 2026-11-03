@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   heap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: login <login@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dassunca <dassunca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/20 16:00:00 by login             #+#    #+#             */
-/*   Updated: 2026/10/20 16:00:00 by login            ###   ########.fr       */
+/*   Created: 2026/10/20 16:00:00 by dassunca          #+#    #+#             */
+/*   Updated: 2026/11/03 14:05:51 by dassunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "codexion.h"
 
 static void	sift_up(t_heap *h, int i)
